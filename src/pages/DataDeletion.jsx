@@ -11,8 +11,6 @@ export default function DataDeletion() {
       {/* ----------------------------- ESPAÑOL ----------------------------- */}
       <h1>Instrucciones para la Eliminación de Datos Personales (Español)</h1>
 
-      <p><strong>Última actualización:</strong> 4 de junio de 2026</p>
-
       <h2>1. Responsable del canal de atención</h2>
 
       <p>

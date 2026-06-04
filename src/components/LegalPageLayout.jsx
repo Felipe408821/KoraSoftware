@@ -52,21 +52,6 @@ export default function LegalPageLayout({
             </p>
           )}
 
-          {showTemplateNotice && (
-            <div className="mt-6 flex gap-3 rounded-2xl border border-amber-200 bg-amber-50/80 p-4 text-sm text-amber-900">
-              <span className="mt-0.5 shrink-0 text-amber-600">
-                <IconAlert width={18} height={18} />
-              </span>
-              <p>
-                <strong>Aviso:</strong> este documento es una{' '}
-                <strong>plantilla orientativa</strong> y no constituye
-                asesoramiento legal. Debe ser revisado y adaptado por un
-                profesional jurídico antes de su uso definitivo, según la
-                actividad real de {site.brand} y la normativa aplicable.
-              </p>
-            </div>
-          )}
-
           {/* Contenido del documento */}
           <article className="legal-prose mt-10">{children}</article>
 

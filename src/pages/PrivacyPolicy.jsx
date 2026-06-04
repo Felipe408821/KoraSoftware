@@ -16,8 +16,6 @@ export default function PrivacyPolicy() {
 
       <h1>Política de Privacidad y Tratamiento de Datos Personales</h1>
 
-      <p><strong>Última actualización:</strong> 4 de junio de 2026</p>
-
       <h2>1. Identificación del responsable</h2>
 
       <p>
