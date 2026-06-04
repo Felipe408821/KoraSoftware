@@ -52,4 +52,3 @@ export default function CookiesPolicy() {
     </LegalPageLayout>
   )
 }
-ESTO_DEBE_ROMPER_EL_BUILD
