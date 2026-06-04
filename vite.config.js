@@ -9,6 +9,6 @@ import react from '@vitejs/plugin-react'
 // de configurar la ruta base. Combinado con HashRouter, el routing funciona
 // sin trucos de redirección 404.
 export default defineConfig({
-  base: './KoraSoftware/',
+  base: './',
   plugins: [react()],
 })
