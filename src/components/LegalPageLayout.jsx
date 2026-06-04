@@ -18,7 +18,6 @@ export default function LegalPageLayout({
   seoTitle,
   seoDescription,
   effectiveDate = site.legalEffectiveDate,
-  showTemplateNotice = true,
   children,
 }) {
   return (
