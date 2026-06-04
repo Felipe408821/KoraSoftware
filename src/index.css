@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white text-ink antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Compensa el header fijo al navegar con anclas (#contacto, etc.) */
+  section[id],
+  div[id] {
+    scroll-margin-top: 6rem;
+  }
+
+  ::selection {
+    @apply bg-brand-600/15 text-brand-900;
+  }
+}
+
+@layer components {
+  .container-kora {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+
+  /* Borde con gradiente sutil para tarjetas premium */
+  .card-ring {
+    @apply rounded-3xl border border-ink/5 bg-white shadow-soft;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50/70 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-700;
+  }
+
+  /* Tipografía para los documentos legales */
+  .legal-prose {
+    @apply text-[15px] leading-relaxed text-ink-soft;
+  }
+  .legal-prose h2 {
+    @apply mt-10 mb-3 text-xl font-bold tracking-tight text-ink;
+  }
+  .legal-prose h3 {
+    @apply mt-7 mb-2 text-base font-semibold text-ink;
+  }
+  .legal-prose p {
+    @apply mb-4;
+  }
+  .legal-prose ul {
+    @apply mb-4 list-disc space-y-1.5 pl-5 marker:text-brand-400;
+  }
+  .legal-prose ol {
+    @apply mb-4 list-decimal space-y-1.5 pl-5 marker:text-brand-500 marker:font-semibold;
+  }
+  .legal-prose a {
+    @apply font-medium text-brand-700 underline-offset-2 hover:underline;
+  }
+  .legal-prose strong {
+    @apply font-semibold text-ink;
+  }
+  .legal-prose hr {
+    @apply my-8 border-ink/10;
+  }
+  .legal-prose .lead {
+    @apply text-base text-ink-muted;
+  }
+}
+
+/* Respeta usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
