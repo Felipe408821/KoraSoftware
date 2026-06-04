@@ -12,7 +12,7 @@ export const site = {
   tagline: 'Agentes de IA para negocios de servicios.',
 
   // Contacto provisional — sustituir cuando se disponga del definitivo
-  email: 'contact@korasoftware.ai',
+  email: 'email@email.com',
 
   // Número de WhatsApp en formato internacional SIN signos ni espacios
   // (ej. 34600000000). Déjalo vacío ('') para ocultar el botón de WhatsApp.

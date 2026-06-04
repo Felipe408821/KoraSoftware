@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
       <h2>1. Identificación del responsable</h2>
 
       <p>
-      La presente Política de Privacidad y Tratamiento de Datos Personales regula la recolección, uso, almacenamiento, circulación, supresión y demás formas de tratamiento de datos personales realizados por <strong>Felipe Camacho, persona natural responsable del proyecto Kora Business Agents</strong>, con domicilio de operación en <strong>[CIUDAD, PAÍS]</strong>, en adelante “Kora”, “Kora Business Agents”, “el Servicio” o “nosotros”.
+      La presente Política de Privacidad y Tratamiento de Datos Personales regula la recolección, uso, almacenamiento, circulación, supresión y demás formas de tratamiento de datos personales realizados por <strong>Kora, persona natural responsable del proyecto Kora Business Agents</strong>, con domicilio de operación en <strong>[CIUDAD, PAÍS]</strong>, en adelante “Kora”, “Kora Business Agents”, “el Servicio” o “nosotros”.
       </p>
 
       <p>
@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
       </p>
 
       <p>
-      <strong>Correo electrónico:</strong> [EMAIL DE CONTACTO]
+      <strong>Correo electrónico:</strong> {site.email}
       <strong>Sitio web:</strong> [URL DEL SITIO WEB]
       </p>
 
@@ -131,7 +131,7 @@ export default function PrivacyPolicy() {
       <h2>10. Procedimiento para consultas, reclamos y solicitudes</h2>
 
       <p>
-      El titular puede ejercer sus derechos enviando una solicitud al correo electrónico <strong>[EMAIL DE CONTACTO]</strong>.
+      El titular puede ejercer sus derechos enviando una solicitud al correo electrónico <strong>{site.email}</strong>.
       </p>
 
       <p>

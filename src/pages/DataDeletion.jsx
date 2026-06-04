@@ -4,17 +4,16 @@ import { site } from '../config/site.js'
 export default function DataDeletion() {
   return (
     <LegalPageLayout
-      title="User Data Deletion Instructions"
-      seoTitle="Instrucciones de Eliminación de Datos"
+      title="Instrucciones de Eliminación de Datos"
       seoDescription="Cómo solicitar la eliminación de tus datos personales tratados por Kora Software. How to request deletion of your personal data."
     >
       {/* ----------------------------- ESPAÑOL ----------------------------- */}
-      <h1>Instrucciones para la Eliminación de Datos Personales (Español)</h1>
+      <h1>Instrucciones para la Eliminación de Datos Personales</h1>
 
       <h2>1. Responsable del canal de atención</h2>
 
       <p>
-      Estas instrucciones explican cómo los titulares pueden solicitar la eliminación, supresión, actualización, rectificación o restricción del tratamiento de sus datos personales tratados por <strong>Felipe Camacho, persona natural responsable del proyecto Kora Business Agents</strong>, en el marco de la prestación de servicios tecnológicos, agentes conversacionales, integraciones con WhatsApp Business Platform, calendarios digitales y otros canales relacionados.
+      Estas instrucciones explican cómo los titulares pueden solicitar la eliminación, supresión, actualización, rectificación o restricción del tratamiento de sus datos personales tratados por <strong>Kora, persona natural responsable del proyecto Kora Business Agents</strong>, en el marco de la prestación de servicios tecnológicos, agentes conversacionales, integraciones con WhatsApp Business Platform, calendarios digitales y otros canales relacionados.
       </p>
 
       <p>
@@ -22,7 +21,7 @@ export default function DataDeletion() {
       </p>
 
       <p>
-      <strong>Correo electrónico:</strong> [EMAIL DE CONTACTO]
+      <strong>Correo electrónico:</strong> {site.email}
       </p>
 
       <h2>2. Derecho a solicitar eliminación de datos</h2>
@@ -38,7 +37,7 @@ export default function DataDeletion() {
       <h2>3. Cómo solicitar la eliminación de datos</h2>
 
       <p>
-      Para solicitar la eliminación de tus datos personales, envía un correo electrónico a <strong>[EMAIL DE CONTACTO]</strong> con el asunto:
+      Para solicitar la eliminación de tus datos personales, envía un correo electrónico a <strong>{site.email}</strong> con el asunto:
       </p>
 
       <p>
@@ -131,7 +130,7 @@ export default function DataDeletion() {
       </p>
 
       <p>
-      <strong>[EMAIL DE CONTACTO]</strong>
+      <strong>{site.email}</strong>
       </p>
       
     </LegalPageLayout>
