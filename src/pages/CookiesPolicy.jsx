@@ -17,7 +17,7 @@ export default function CookiesPolicy() {
         Actualmente, este sitio web <strong>no utiliza cookies de análisis ni de
         publicidad</strong>, ni tecnologías de seguimiento de terceros. No
         elaboramos perfiles de navegación ni compartimos tu actividad con terceros
-        con fines publicitarios.
+        con fines publicitarios. 
       </p>
 
       <h2>2. Cookies técnicas necesarias</h2>
