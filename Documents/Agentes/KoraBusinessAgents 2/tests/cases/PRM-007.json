@@ -1,0 +1,54 @@
+{
+  "id": "PRM-007",
+  "type": "INVALID",
+  "description": "Fecha demasiado vaga mantiene solicitud de fecha concreta",
+  "tags": [
+    "reserva",
+    "fecha_ambigua",
+    "robustez"
+  ],
+  "turns": [
+    {
+      "user": "Quiero pedir cita",
+      "assert": {
+        "stage": "COLLECTING_SERVICE",
+        "reply_contains_any": [
+          "consulta",
+          "tipo",
+          "servicio"
+        ]
+      }
+    },
+    {
+      "user": "Una limpieza",
+      "assert": {
+        "stage": "COLLECTING_DATE",
+        "reply_contains_any": [
+          "día",
+          "fecha",
+          "vendría",
+          "cuándo",
+          "cuando"
+        ]
+      }
+    },
+    {
+      "user": "Algún día de estos",
+      "assert": {
+        "stage": "COLLECTING_DATE",
+        "reply_contains_any": [
+          "día",
+          "fecha",
+          "cuándo",
+          "cuando",
+          "concreta",
+          "hora"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada"
+        ]
+      }
+    }
+  ]
+}

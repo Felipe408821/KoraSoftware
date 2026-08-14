@@ -1,0 +1,5 @@
+DEFAULT_CLINIC_ID = "clinic_demo"
+DEFAULT_CLINIC_NAME = "Clínica Perfect Smile"
+DEFAULT_ASSISTANT_NAME = "Lucía"
+DEFAULT_DOCTOR_NAME = "Dra. María Fernanda Valdivieso"
+DEFAULT_CLINIC_ADDRESS = "Centro Comercial Unicentro Cali"

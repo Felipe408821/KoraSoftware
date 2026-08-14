@@ -1,0 +1,30 @@
+{
+  "id": "PRM-014",
+  "type": "INVALID",
+  "description": "Usuario mezcla reserva y cancelación en el mismo mensaje",
+  "tags": [
+    "ambiguedad",
+    "intenciones_multiples",
+    "robustez"
+  ],
+  "turns": [
+    {
+      "user": "Quiero pedir una limpieza pero también cancelar una cita anterior",
+      "assert": {
+        "reply_contains_any": [
+          "cancel",
+          "pedir",
+          "cita",
+          "aclar",
+          "primero",
+          "ayudo"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada",
+          "cancelada"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "PRM-004",
+  "type": "VALID",
+  "description": "Reserva directa indicando servicio en el primer mensaje",
+  "tags": [
+    "reserva",
+    "servicio_directo",
+    "happy_path"
+  ],
+  "turns": [
+    {
+      "user": "Hola, quiero pedir cita para una limpieza dental",
+      "assert": {
+        "stage": "COLLECTING_DATE",
+        "reply_contains_any": [
+          "día",
+          "fecha",
+          "cuándo",
+          "cuando",
+          "vendría"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada",
+          "cancelada"
+        ]
+      }
+    }
+  ]
+}

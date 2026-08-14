@@ -1,0 +1,26 @@
+{
+  "id": "PRM-001",
+  "type": "VALID",
+  "description": "Primer mensaje recibe saludo de Lucía",
+  "tags": [
+    "primer_mensaje",
+    "happy_path"
+  ],
+  "turns": [
+    {
+      "user": "Hola",
+      "assert": {
+        "stage": "IDLE",
+        "reply_contains_any": [
+          "lucí",
+          "lucia",
+          "perfect smile"
+        ],
+        "reply_excludes": [
+          "pedir",
+          "cancelar"
+        ]
+      }
+    }
+  ]
+}

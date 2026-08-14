@@ -1,0 +1,29 @@
+{
+  "id": "PRM-012",
+  "type": "VALID",
+  "description": "Cancelación expresada desde el primer mensaje",
+  "tags": [
+    "cancelacion",
+    "intencion_directa",
+    "robustez"
+  ],
+  "turns": [
+    {
+      "user": "Hola, necesito cancelar mi cita",
+      "assert": {
+        "reply_contains_any": [
+          "cancel",
+          "cita",
+          "teléfono",
+          "nombre",
+          "fecha",
+          "datos"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada"
+        ]
+      }
+    }
+  ]
+}

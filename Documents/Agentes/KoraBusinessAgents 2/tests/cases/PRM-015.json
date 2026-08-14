@@ -1,0 +1,74 @@
+{
+  "id": "PRM-015",
+  "type": "INVALID",
+  "description": "No confirma cita si el usuario aún no ha aceptado un slot",
+  "tags": [
+    "reserva",
+    "no_confirmacion_prematura",
+    "robustez"
+  ],
+  "turns": [
+    {
+      "user": "Quiero pedir cita",
+      "assert": {
+        "stage": "COLLECTING_SERVICE",
+        "reply_contains_any": [
+          "consulta",
+          "tipo",
+          "servicio"
+        ]
+      }
+    },
+    {
+      "user": "Una limpieza",
+      "assert": {
+        "stage": "COLLECTING_DATE",
+        "reply_contains_any": [
+          "día",
+          "fecha",
+          "vendría",
+          "cuándo",
+          "cuando"
+        ]
+      }
+    },
+    {
+      "user": "Mañana",
+      "assert": {
+        "reply_contains_any": [
+          "hora",
+          "disponible",
+          "puedo",
+          "te viene",
+          "confirm",
+          "mañana"
+        ],
+        "reply_excludes": [
+          "queda confirmada",
+          "cita confirmada",
+          "reservada correctamente"
+        ]
+      }
+    },
+    {
+      "user": "A las 9",
+      "assert": {
+      }
+    },
+    {
+      "user": "A las 9",
+      "assert": {
+      }
+    },
+    {
+      "user": "Santiago Jaramillo",
+      "assert": {
+      }
+    },
+    {
+      "user": "Si",
+      "assert": {
+      }
+    }
+  ]
+}

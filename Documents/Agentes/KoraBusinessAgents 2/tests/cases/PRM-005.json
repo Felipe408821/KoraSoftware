@@ -1,0 +1,41 @@
+{
+  "id": "PRM-005",
+  "type": "VALID",
+  "description": "Reserva con sinónimo de limpieza",
+  "tags": [
+    "reserva",
+    "sinonimos",
+    "servicio"
+  ],
+  "turns": [
+    {
+      "user": "Necesito una cita",
+      "assert": {
+        "stage": "COLLECTING_SERVICE",
+        "reply_contains_any": [
+          "consulta",
+          "tipo",
+          "servicio",
+          "tratamiento"
+        ]
+      }
+    },
+    {
+      "user": "Una higiene oral",
+      "assert": {
+        "stage": "COLLECTING_DATE",
+        "reply_contains_any": [
+          "día",
+          "fecha",
+          "cuándo",
+          "cuando",
+          "vendría"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "PRM-008",
+  "type": "INVALID",
+  "description": "Mensaje vacío o sin contenido útil no rompe el flujo",
+  "tags": [
+    "fallback",
+    "robustez",
+    "input_invalido"
+  ],
+  "turns": [
+    {
+      "user": "Quiero pedir cita",
+      "assert": {
+        "stage": "COLLECTING_SERVICE",
+        "reply_contains_any": [
+          "consulta",
+          "tipo",
+          "servicio"
+        ]
+      }
+    },
+    {
+      "user": "   ",
+      "assert": {
+        "stage": "COLLECTING_SERVICE",
+        "reply_contains_any": [
+          "servicio",
+          "tratamiento",
+          "tipo",
+          "no he entendido",
+          "perdona"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada",
+          "cancelada"
+        ]
+      }
+    }
+  ]
+}

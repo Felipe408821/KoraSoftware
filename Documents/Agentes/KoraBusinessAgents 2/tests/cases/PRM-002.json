@@ -1,0 +1,22 @@
+{
+  "id": "PRM-002",
+  "type": "VALID", 
+  "description": "Flujo completo de reserva",
+  "tags": ["reserva", "happy_path"],
+  "turns": [
+    {
+      "user": "Quiero pedir cita",
+      "assert": {
+        "stage": "COLLECTING_SERVICE",
+        "reply_contains_any": ["consulta", "tipo", "servicio"]
+      }
+    },
+    {
+      "user": "Una limpieza",
+      "assert": {
+        "stage": "COLLECTING_DATE",
+        "reply_contains_any": ["día", "fecha", "vendría"]
+      }
+    }
+  ]
+}

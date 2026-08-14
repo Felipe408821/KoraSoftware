@@ -1,0 +1,40 @@
+{
+  "id": "PRM-009",
+  "type": "VALID",
+  "description": "Usuario corrige el servicio antes de dar fecha",
+  "tags": [
+    "reserva",
+    "correccion",
+    "robustez"
+  ],
+  "turns": [
+    {
+      "user": "Quiero pedir cita",
+      "assert": {
+        "stage": "COLLECTING_SERVICE",
+        "reply_contains_any": [
+          "consulta",
+          "tipo",
+          "servicio"
+        ]
+      }
+    },
+    {
+      "user": "Ortodoncia, perdón no, limpieza",
+      "assert": {
+        "stage": "COLLECTING_DATE",
+        "reply_contains_any": [
+          "día",
+          "fecha",
+          "cuándo",
+          "cuando",
+          "vendría"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada"
+        ]
+      }
+    }
+  ]
+}

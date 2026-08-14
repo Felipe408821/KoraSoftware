@@ -1,0 +1,28 @@
+{
+  "id": "PRM-003",
+  "type": "VALID",
+  "description": "Saludo natural con contexto de clínica",
+  "tags": [
+    "primer_mensaje",
+    "saludo",
+    "robustez"
+  ],
+  "turns": [
+    {
+      "user": "Buenas tardes, ¿me podéis ayudar?",
+      "assert": {
+        "stage": "IDLE",
+        "reply_contains_any": [
+          "lucí",
+          "lucia",
+          "perfect smile",
+          "hola"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "PRM-013",
+  "type": "VALID",
+  "description": "Cambio de cita expresado desde el primer mensaje",
+  "tags": [
+    "reprogramacion",
+    "intencion_directa",
+    "robustez"
+  ],
+  "turns": [
+    {
+      "user": "Quiero cambiar la cita que tengo agendada",
+      "assert": {
+        "reply_contains_any": [
+          "cambiar",
+          "modificar",
+          "reprogram",
+          "cita",
+          "fecha",
+          "datos"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada"
+        ]
+      }
+    }
+  ]
+}

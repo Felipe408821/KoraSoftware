@@ -1,0 +1,34 @@
+{
+  "id": "PRM-010",
+  "type": "VALID",
+  "description": "FAQ de horarios no debe iniciar reserva automáticamente",
+  "tags": [
+    "faq",
+    "horarios",
+    "no_reserva"
+  ],
+  "turns": [
+    {
+      "user": "¿Qué horario tenéis?",
+      "assert": {
+        "reply_contains_all": [
+          "lunes",
+          "viernes"
+        ],
+        "reply_contains_any": [
+          "horario",
+          "abrimos",
+          "abierto",
+          "lunes",
+          "viernes",
+          "mañana"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada",
+          "cancelada"
+        ]
+      }
+    }
+  ]
+}

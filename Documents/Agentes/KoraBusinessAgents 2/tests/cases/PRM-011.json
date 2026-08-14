@@ -1,0 +1,29 @@
+{
+  "id": "PRM-011",
+  "type": "VALID",
+  "description": "FAQ de ubicación no debe iniciar reserva automáticamente",
+  "tags": [
+    "faq",
+    "ubicacion",
+    "no_reserva"
+  ],
+  "turns": [
+    {
+      "user": "¿Dónde está la clínica?",
+      "assert": {
+        "reply_contains_any": [
+          "dirección",
+          "ubicación",
+          "estamos",
+          "clínica",
+          "perfect smile"
+        ],
+        "reply_excludes": [
+          "confirmada",
+          "reservada",
+          "cancelada"
+        ]
+      }
+    }
+  ]
+}

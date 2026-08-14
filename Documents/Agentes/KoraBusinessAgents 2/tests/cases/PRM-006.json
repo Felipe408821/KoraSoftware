@@ -1,0 +1,43 @@
+{
+  "id": "PRM-006",
+  "type": "INVALID",
+  "description": "Servicio ambiguo no debe avanzar a fecha sin aclarar",
+  "tags": [
+    "reserva",
+    "ambiguedad",
+    "robustez"
+  ],
+  "turns": [
+    {
+      "user": "Quiero una cita",
+      "assert": {
+        "stage": "COLLECTING_SERVICE",
+        "reply_contains_any": [
+          "consulta",
+          "tipo",
+          "servicio",
+          "tratamiento"
+        ]
+      }
+    },
+    {
+      "user": "Lo de los dientes",
+      "assert": {
+        "stage": "COLLECTING_SERVICE",
+        "reply_contains_any": [
+          "servicio",
+          "tratamiento",
+          "tipo",
+          "limpieza",
+          "consulta"
+        ],
+        "reply_excludes": [
+          "día",
+          "fecha",
+          "confirmada",
+          "reservada"
+        ]
+      }
+    }
+  ]
+}
